@@ -1,0 +1,233 @@
+/* Rio A. Gatacilo III — personal website */
+
+/* Reset and page defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #17212b;
+  background: #f7f9fc;
+}
+
+/* Navigation */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e7ebf0;
+}
+
+.navbar {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  color: #17212b;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 26px;
+}
+
+.nav-links a {
+  color: #536171;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #315fce;
+}
+
+/* Hero and profile photo */
+.hero {
+  min-height: 590px;
+  padding: 75px 24px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #eaf1ff 0%, #f7f9fc 70%);
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+  color: #315fce;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+h1 span {
+  color: #315fce;
+}
+
+.intro {
+  max-width: 490px;
+  margin-bottom: 28px;
+  color: #596675;
+  font-size: 1.08rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 8px;
+  background: #315fce;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: #244aa5;
+  transform: translateY(-2px);
+}
+
+.profile-frame {
+  width: min(100%, 370px);
+  justify-self: center;
+  overflow: hidden;
+  border: 9px solid #ffffff;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgba(30, 55, 90, 0.14);
+}
+
+.profile-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* About and contact */
+.content-section {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 82px 24px;
+}
+
+.content-section h2 {
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+
+.content-section > p:not(.eyebrow) {
+  color: #596675;
+}
+
+.contact {
+  padding-top: 12px;
+  padding-bottom: 100px;
+}
+
+.contact-name {
+  margin-bottom: 16px;
+  color: #17212b !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.email-label {
+  margin-bottom: 4px;
+  color: #596675;
+  font-size: 0.9rem;
+}
+
+.email-link {
+  color: #315fce;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  padding: 24px;
+  background: #17212b;
+  color: #dce4ed;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive layout for phones and tablets */
+@media (max-width: 760px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile-frame {
+    width: min(78%, 330px);
+  }
+
+  .hero {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .content-section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+}
